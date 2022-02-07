@@ -28,5 +28,19 @@ const checkIfHitInFirst = (fakebox) => {
     {
         HitArrayForFirst[i-1][j-1] = false
         fakebox.innerHTML = 'MISS'
+        
+    }
+    console.log(findTotalClickCount(maxClick))
+}
+
+
+const findTotalClickCount = (maxClick) => {
+    if(maxClick ==  0)
+    {
+        return 0;
+    }
+    else
+    {
+        return (maxClick+findTotalClickCount(maxClick-1));
     }
 }
