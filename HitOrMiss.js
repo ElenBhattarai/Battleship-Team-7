@@ -33,7 +33,7 @@ const checkIfHitInFirst = (fakebox) => {
     console.log(findTotalClickCount(maxClick))
 }
 
-
+//using recursion to find the total count of clicks according to ship to work on the winner function
 const findTotalClickCount = (maxClick) => {
     if(maxClick ==  0)
     {
