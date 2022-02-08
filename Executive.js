@@ -50,7 +50,6 @@ const startGame = () => {
     startGameDiv.classList.add("hidden")
 
     //now we should instead make the "Switch Team" visible by removing the "hidden class from it"
-    switchTeam.classList.remove('hidden')
 }
 
 

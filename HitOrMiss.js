@@ -33,7 +33,9 @@ const checkIfHitInFirst = (fakebox) => {
             },200)
         }
         turnSwitch++;
+        switchTeam.classList.remove('hidden')
     } 
+
 }
 
 //Checks hit or miss
@@ -69,6 +71,7 @@ const checkIfHitInSecond = (fakebox) => {
             },200)
         }
         turnSwitch++;
+        switchTeam.classList.remove('hidden');
     }
     
 }

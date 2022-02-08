@@ -17,4 +17,5 @@ switchTeam.addEventListener('click', ()=>{
         renderBackOfSecondBoard();
     }
     kun++
+    switchTeam.classList.add("hidden")
 })
