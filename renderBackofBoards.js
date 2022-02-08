@@ -40,14 +40,14 @@ const renderBackOfFirstBoard = () => {
             square.style.top = topPosition + 'px'
             square.style.left = leftPosition + 'px'
 
-            if( square.i > 0 && square.j > 0)
+            if( square.i >= 0 && square.j >= 0)
             {
-                if(HitArrayForFirst[parseInt(square.i)-1][parseInt(square.j)-1] == true)
+                if(HitArrayForFirst[parseInt(square.i)][parseInt(square.j)] == true)
                 {
                     //if it is a hit, put in an indicator for it
                     square.innerHTML = 'HIT'
                 }
-                else if(HitArrayForFirst[parseInt(square.i)-1][parseInt(square.j)-1] == false)
+                else if(HitArrayForFirst[parseInt(square.i)][parseInt(square.j)] == false)
                 {
                     //if it is a hit, put in an indicator for it
                     square.innerHTML = 'MISS'
@@ -99,14 +99,14 @@ const renderBackOfSecondBoard = () => {
             square.style.top = topPosition + 'px'
             square.style.left = leftPosition + 'px'
 
-            if( square.i > 0 && square.j > 0)
+            if( square.i >= 0 && square.j >= 0)
             {
-                if(HitArrayForSecond[parseInt(square.i)-1][parseInt(square.j)-1] == true)
+                if(HitArrayForSecond[parseInt(square.i)][parseInt(square.j)] == true)
                 {
                      //if it is a hit, put in an indicator for it
                     square.innerHTML = 'HIT'
                 }
-                else if(HitArrayForSecond[parseInt(square.i)-1][parseInt(square.j)-1] == false)
+                else if(HitArrayForSecond[parseInt(square.i)][parseInt(square.j)] == false)
                 {
                     //if it is a hit, put in an indicator for it
                     square.innerHTML = 'MISS'
