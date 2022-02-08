@@ -1,30 +1,39 @@
 
+let turnSwitch = 0;
 const checkIfHitInFirst = (fakebox) => {
     let i = fakebox.i;
     let j = fakebox.j;
 
-    if(visitedArrayForFirst[i][j])
+    if(turnSwitch % 2 == 0)
     {
-        HitArrayForFirst[i][j] = true
-        fakebox.innerHTML = 'HIT'
+        alert("Not your, Player 2,switch turn now")
     }
     else
     {
-        HitArrayForFirst[i][j] = false
-        fakebox.innerHTML = 'MISS'
-        
-    }
-
-    if(checkIfWinInFirst() == true)
-    {
-        setTimeout(()=>{
-            alert("Player 2 won")
-        },200)
-
-        setTimeout(()=> {
-            location.reload()
-        },200)
-    }
+        if(visitedArrayForFirst[i][j])
+        {
+            HitArrayForFirst[i][j] = true
+            fakebox.innerHTML = 'HIT'
+        }
+        else
+        {
+            HitArrayForFirst[i][j] = false
+            fakebox.innerHTML = 'MISS'
+            
+        }
+    
+        if(checkIfWinInFirst() == true)
+        {
+            setTimeout(()=>{
+                alert("Player 2 won")
+            },200)
+    
+            setTimeout(()=> {
+                location.reload()
+            },200)
+        }
+        turnSwitch++;
+    } 
 }
 
 //Checks hit or miss
@@ -32,28 +41,36 @@ const checkIfHitInSecond = (fakebox) => {
     let i = fakebox.i
     let j = fakebox.j
    
-    if(visitedArrayForSecond[i][j])
-    {   
-        HitArrayForSecond[i][j] = true
-        fakebox.innerHTML = 'HIT' 
+    if(turnSwitch % 2 == 1)
+    {
+        alert("Not your turn, Player 1,switch turn now")
     }
     else
     {
-        HitArrayForSecond[i][j] = false
-        fakebox.innerHTML = 'MISS'
+        if(visitedArrayForSecond[i][j])
+        {   
+            HitArrayForSecond[i][j] = true
+            fakebox.innerHTML = 'HIT' 
+        }
+        else
+        {
+            HitArrayForSecond[i][j] = false
+            fakebox.innerHTML = 'MISS'
+        }
+    
+        if(checkIfWinInSecond() == true)
+        {
+            setTimeout(()=>{
+                alert("Player 1 won")
+            },200)
+    
+            setTimeout(()=> {
+                location.reload()
+            },200)
+        }
+        turnSwitch++;
     }
-
-    if(checkIfWinInSecond() == true)
-    {
-        setTimeout(()=>{
-            alert("Player 2 won")
-        },200)
-
-        setTimeout(()=> {
-            location.reload()
-        },200)
-    }
-
+    
 }
 
 

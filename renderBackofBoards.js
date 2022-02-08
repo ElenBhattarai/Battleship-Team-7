@@ -29,9 +29,8 @@ const renderBackOfFirstBoard = () => {
                 square.i = i-1
                 square.j = j-1
 
-                //when clicked on the buttons in the back of the first board, it is checked if it's a hit or miss by function in HitOrMiss.js
+                    //when clicked on the buttons in the back of the first board, it is checked if it's a hit or miss by function in HitOrMiss.js
                 square.addEventListener('click', ()=> checkIfHitInFirst(square))
-                
             }
 
             let topPosition = i * squareSize;
