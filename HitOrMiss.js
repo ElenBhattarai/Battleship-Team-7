@@ -14,7 +14,17 @@ const checkIfHitInFirst = (fakebox) => {
         fakebox.innerHTML = 'MISS'
         
     }
-    console.log(findTotalClickCount(maxClick))
+
+    if(checkIfWinInFirst() == true)
+    {
+        setTimeout(()=>{
+            alert("Player 2 won")
+        },200)
+
+        setTimeout(()=> {
+            location.reload()
+        },200)
+    }
 }
 
 //Checks hit or miss
@@ -33,6 +43,64 @@ const checkIfHitInSecond = (fakebox) => {
         fakebox.innerHTML = 'MISS'
     }
 
+    if(checkIfWinInSecond() == true)
+    {
+        setTimeout(()=>{
+            alert("Player 2 won")
+        },200)
+
+        setTimeout(()=> {
+            location.reload()
+        },200)
+    }
+
+}
+
+
+const checkIfWinInFirst = () => {
+    let hitCountFirst = 0;
+    for(let i = 0; i < 10; i++)
+    {
+        for(let j = 0; j < 10; j++ )
+        {
+            if(HitArrayForFirst[i][j] == true)
+            {
+                hitCountFirst++;
+            }
+        }
+    }
+    if(hitCountFirst == findTotalClickCount(numOfShips))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+
+
+const checkIfWinInSecond = ()=> {
+    let hitCountSecond = 0; 
+    for(let i = 0; i < 10; i++)
+    {
+        for(let j = 0; j < 10; j++)
+        {
+            if(HitArrayForSecond[i][j] == true)
+            {
+                hitCountSecond++;
+            }
+        }
+    }
+    if(hitCountSecond == findTotalClickCount(numOfShips))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 //using recursion to find the total count of clicks according to ship to work on the winner function
@@ -46,5 +114,3 @@ const findTotalClickCount = (maxClick) => {
         return (maxClick+findTotalClickCount(maxClick-1));
     }
 }
-
-
