@@ -31,7 +31,8 @@ const renderBackOfFirstBoard = () => {
 
                 //when clicked on the buttons in the back of the first board, it is checked if it's a hit or miss by function in HitOrMiss.js
                 square.addEventListener('click', ()=> checkIfHitInFirst(square))
-                
+                attackCountFirst = 0;
+				attackCountSecond = 0;
             }
 
             let topPosition = i * squareSize;
