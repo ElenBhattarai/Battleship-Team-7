@@ -22,7 +22,7 @@ button{
 #firstGameBoard div {
 	position:absolute;
 	background: green; /* Old browsers */
-	border: 1px solid #ddd;
+	border: 5px solid #ddd;
 	width:40px;
 	height:40px;
 	font-size: 30px;
@@ -43,7 +43,7 @@ button{
 #secondGameBoard div {
 	position:absolute;
 	background: blue; /* Old browsers */
-	border: 1px solid #ddd;
+	border: 5px solid #ddd;
 	width:40px;
 	height:40px;
 }
@@ -58,7 +58,7 @@ button{
 	color: black;
 	height: 70px;
 	width: 150px;
-	background:blue;
+	/*background:blue;*/
 	margin: 450px auto;
 	font-size: 30px;
 }
@@ -67,7 +67,7 @@ button{
 	color: black;
 	height: 70px;
 	width: 150px;
-	background:blue;
+	/*background:blue;*/
 	font-size: 30px;
 	margin: auto;
 }
@@ -116,3 +116,64 @@ button{
 	background : red;
 }
 
+.btn{
+	padding: 0.5rem 1 rem;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.modal-btn{
+	background-color: transparent;
+	border: none;
+	font-size: 1.5cm;
+}
+
+.modal{
+	width: 450px;
+	position: fixed;
+	top: -50%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	transition: top 0.5s ease-in-out;
+	border: 5px solid rgb(12, 12, 12);
+	font-family: "Segoe UI";
+	border-radius: 10px;
+	background-color: rgb(250, 250, 250);
+	z-index: 2;
+}
+
+.modal.active{
+	top: 15%;
+}
+
+.header{
+	display: flex;
+	justify-content:space-evenly;
+	align-items: center;
+	padding: 0.5rem 1rem; 
+	background-color:rgba(58, 61, 61, 0.322);
+	border-bottom: 1px solid rgb(5, 5, 5);
+}
+
+.body{
+	padding: 1rem;
+}
+
+.btn.active{
+	transform:scale(0.9);
+}
+
+#overlay{
+	display:none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color:rgba(0, 0, 0, 0.2) ;
+}
+
+#overlay.active{
+	display: block;
+}

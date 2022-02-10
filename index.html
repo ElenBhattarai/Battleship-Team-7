@@ -6,12 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+
+    <title>Pop-up Box type | Alert Box</title>
+    <style>
+        h1{
+            color:green;
+        }
+        body{ 
+          background-image: url('Background.jpg');
+        }
+    </style>
     
 </head>
 <body>
-    <div id = "switchTeam" class = "hidden">
-        <button id = "switch">Switch Team</button>
-    </div>
+    
+	<center>
+ 
+        <h1>BATTLESHIP</h1>
+
+		<button class="btn" id="beginBtn" data-target="#beginModal">Begin Game</button>
+
+        <div id="switchTeams" class="hidden">
+            <button class="btn" id="beginBtn2" data-target="#switch">Switch Team</button>
+        </div>
+        
+        <div class="modal" id="beginModal">
+			<div class="header">
+				<div class="title">Welcome to team 7's Battleship!</div>
+				<button class="btn modal-btn" data-target="#beginModal">&times;</button>
+            </div>
+			<div class="body">
+			Please place your ships...
+			</div>
+        </div>
+
+        <div class="modal" id="switch">
+			<div class="header">
+				<div class="title">Turn Finished!</div>
+				<button class="btn modal-btn" data-target="#switch">&times;</button>
+            </div>
+			<div class="body">
+			Switching Teams...
+			</div>
+        </div>
+
+
+        <div id="#overlay"></div>
+
+    </center>
+
+
+
+
+
+
     <div id = "boards">
         <div id="firstGameBoard">
 
