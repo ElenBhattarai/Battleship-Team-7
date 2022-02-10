@@ -10,7 +10,11 @@ const checkIfHitInSecond = (fakebox) => {
 		if(visitedArrayForSecond[i][j])
 		{   
 			HitArrayForSecond[i-1][j-1] = true
-			fakebox.innerHTML = 'HIT' 
+			fakebox.innerHTML = 'HIT'
+			if(checkIfHitInSecond() == true)
+			{
+				//prompt player 2 as winner
+			}
 		}
 		else
 		{
@@ -36,6 +40,10 @@ const checkIfHitInFirst = (fakebox) => {
 		{
 			HitArrayForFirst[i-1][j-1] = true
 			fakebox.innerHTML = 'HIT'
+			if(checkIfHitInFirst()==true)
+			{
+				//prompt player 1 has won
+			}
 		}
 		else
 		{
