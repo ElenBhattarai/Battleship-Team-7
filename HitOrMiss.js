@@ -4,11 +4,11 @@ const checkIfHitInFirst = (fakebox) => {
   let j = fakebox.j;
 
   if (turnSwitch % 2 == 0) {
-    alert("Not your, Player 2,switch team now");
+    alert("Player 2, you took your turn... Switch now!");
   } else {
     if(HitArrayForFirst[i][j] == true || HitArrayForFirst[i][j] == false)
     {
-      let inner = document.getElementsByClassName('log-wrapper')[0] 
+      let inner = document.getElementsByClassName('log-wrapper')[0]
       inner.innerHTML = "Already clicked that space. Try again !"
     }
     else
@@ -17,21 +17,21 @@ const checkIfHitInFirst = (fakebox) => {
         HitArrayForFirst[i][j] = true;
         fakebox.classList.add(".hit-box");
         fakebox.innerHTML = "✅";
-        let inner = document.getElementsByClassName('log-wrapper')[0] 
+        let inner = document.getElementsByClassName('log-wrapper')[0]
         inner.innerHTML = "HIT !!! Switch Team now."
       } else {
         HitArrayForFirst[i][j] = false;
         fakebox.classList.add(".miss-box");
         fakebox.innerHTML = "❌";
-        let inner = document.getElementsByClassName('log-wrapper')[0] 
+        let inner = document.getElementsByClassName('log-wrapper')[0]
         inner.innerHTML = "MISS !!! Switch Team now."
       }
-  
+
       if (checkIfWinInFirst() == true) {
         setTimeout(() => {
-          alert("Player 2 won");
+          alert("Player 2 WINS!!");
         }, 200);
-  
+
         setTimeout(() => {
           location.reload();
         }, 200);
@@ -48,11 +48,11 @@ const checkIfHitInSecond = (fakebox) => {
   let j = fakebox.j;
 
   if (turnSwitch % 2 == 1) {
-    alert("Not your turn, Player 1,switch team now");
+    alert("Player 1, you took your turn... Switch now!");
   } else {
     if(HitArrayForSecond[i][j] == true || HitArrayForSecond[i][j] == false)
     {
-      let inner = document.getElementsByClassName('log-wrapper')[0] 
+      let inner = document.getElementsByClassName('log-wrapper')[0]
       inner.innerHTML = "Already clicked that space. Try again !"
     }
     else
@@ -61,21 +61,21 @@ const checkIfHitInSecond = (fakebox) => {
         HitArrayForSecond[i][j] = true;
         fakebox.classList.add(".hit-box");
         fakebox.innerHTML = "✅";
-        let inner = document.getElementsByClassName('log-wrapper')[0] 
+        let inner = document.getElementsByClassName('log-wrapper')[0]
         inner.innerHTML = "HIT !!! Switch Team now."
       } else {
         HitArrayForSecond[i][j] = false;
         fakebox.classList.add(".miss-box");
         fakebox.innerHTML = "❌";
-        let inner = document.getElementsByClassName('log-wrapper')[0] 
+        let inner = document.getElementsByClassName('log-wrapper')[0]
         inner.innerHTML = "MISS !!! Switch Team now."
       }
-  
+
       if (checkIfWinInSecond() == true) {
         setTimeout(() => {
-          alert("Player 1 won");
+          alert("Player 1 WINS!!");
         }, 200);
-  
+
         setTimeout(() => {
           location.reload();
         }, 200);
@@ -83,7 +83,7 @@ const checkIfHitInSecond = (fakebox) => {
       turnSwitch++;
       switchTeam.classList.remove("hidden");
     }
-  }    
+  }
 };
 
 const checkIfWinInFirst = () => {
