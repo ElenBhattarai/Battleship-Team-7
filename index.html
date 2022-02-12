@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Battleship</h1>
+    <div class="center-container">
+      <div id="boards">
+        <div id="firstGameBoard" class="gameBoard"></div>
+        <div id="backOfFirst" class="gameBoard hidden"></div>
+        <div class="prompt-container">
+          <div class="radio-wrapper">
+            <p>Change your ship direction:</p>
+            <label for="horizontal"
+            >Right
+
+              <input
+                type="radio"
+                name="orientation"
+                value="horizontal"
+                id="horizontal"
+                onclick = getOrientation(this.value);
+                checked
+              />
+            </label>
+            <label for="horizontal"
+              >Down
+
+              <input
+                type="radio"
+                name="orientation"
+                value="vertical"
+                id="vertical"
+                onclick = getOrientation(this.value);
+                
+              />
+            </label>
+          </div>
+          <div class="log-container">
+            <div class="log-wrapper"></div>
+          </div>
+        </div>
+        <div id="secondGameBoard" class="gameBoard"></div>
+        <div id="backOfSecond" class="gameBoard hidden"></div>
+      </div>
+    </div>
+    <div class="center-container">
+      <div id="switchTeam" class="hidden">
+        <button id="switch">Switch Team</button>
+      </div>
+      <div id="prompter" class="hidden">
+        <button id="clicker">Start Game</button>
+      </div>
+    </div>
+    <script src="Arrays.js"></script>
+    <script src="CheckValidIndex.js"></script>
+    <script src="placingShips.js"></script>
+    <script src="boardSetup.js"></script>
+    <script src="renderBackofBoards.js"></script>
+    <script src="switchTeam.js"></script>
+    <script src="HitOrMiss.js"></script>
+    <script src="Executive.js"></script>
+  </body>
+</html>
