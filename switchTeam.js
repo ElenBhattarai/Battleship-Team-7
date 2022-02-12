@@ -26,3 +26,4 @@ switchTeam.addEventListener("click", () => {
   kun++;
   switchTeam.classList.add("hidden");
 });
+

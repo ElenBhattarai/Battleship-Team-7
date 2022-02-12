@@ -29,8 +29,10 @@ const renderBackOfFirstBoard = () => {
         square.addEventListener("click", () => checkIfHitInFirst(square));
       }
 
+
       let topPosition = i * squareSize;
       let leftPosition = j * squareSize;
+
 
       square.style.top = topPosition + "px";
       square.style.left = leftPosition + "px";

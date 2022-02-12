@@ -1,3 +1,4 @@
+
 let turnSwitch = 0;
 const checkIfHitInFirst = (fakebox) => {
   let i = fakebox.i;

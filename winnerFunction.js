@@ -1,19 +1,37 @@
-let firstCount = 0;
-let secondCount = 0;
-function WinnerCountFirst()
+function CheckIfWinInFirst()
 {
-    firstCount++;
-    return firstCount;
-}
-function WinnerCountSecond()
-{
-    secondCount++;
-    return secondCount;
-}
-function Winner(winner)
-{
-    if(winner == findTotalClickCount(maxClick))
+    let count=0;
+    for(let i=0;i<10;i++)
     {
-        //display prompt that 
+        for(let j=0;j<10;j++)
+        {
+            if(HitArrayForFirst[i][j] == true)
+            {
+                count++;
+            }
+        }
+    }
+    if(count == findTotalClickCount(maxClick))
+    {
+        return true;
+    }
+}
+
+function CheckIfWinInSecond()
+{
+    let count=0;
+    for(let i=0;i<10;i++)
+    {
+        for(let j=0;j<10;j++)
+        {
+            if(HitArrayForSecond[i][j] == true)
+            {
+                count++;
+            }
+        }
+    }
+    if(count == findTotalClickCount(maxClick))
+    {
+        return true;
     }
 }

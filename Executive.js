@@ -1,5 +1,10 @@
 //this is what starts the game; it is defined in boardSetup.js
-renderFirstBoard();
+let BeginModal = document.getElementById("beginModal")
+let BeginBtn = document.getElementById("beginBtn")
+BeginModal.addEventListener('click', ()=>{
+    BeginBtn.classList.add("hidden")
+    renderFirstBoard();
+})
 
 
 // renderSecondBoard();
