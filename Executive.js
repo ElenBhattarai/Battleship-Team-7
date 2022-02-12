@@ -1,7 +1,6 @@
 //this is what starts the game; it is defined in boardSetup.js
 renderFirstBoard();
 
-
 // renderSecondBoard();
 
 let playerNow = 1;
