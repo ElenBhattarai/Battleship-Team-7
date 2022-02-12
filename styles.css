@@ -97,7 +97,7 @@ button:hover {
   border: 1px solid #ddd;
   width: 40px;
   height: 40px;
-  font-size: 30px;
+  font-size: 23px;
   text-align: center;
 }
 
@@ -115,6 +115,7 @@ button:hover {
 #backOfSecond div {
   background: #8a95ff; /* Old browsers */
 }
+
 .hidden {
   display: none;
 }
@@ -122,31 +123,25 @@ button:hover {
 .invisible {
   visibility: hidden;
 }
-.hit {
-  background: red;
-}
 
-.hit{
-	background: red !important;
-}
 
 .carrier{
-	background: red !important;
+	background:  #5dacbd !important;
 }
 
 .battleship{
-	background: black !important;
+	background: #24527a!important;
 }
 
 .cruiser{
-	background: blue !important;
+	background: #a7bcb9 !important;
 }
 
 .submarine{
-	background: orange !important;
+	background: #e0ebeb !important;
 }
 
 .destroyer{
-	background: purple !important;
+	background: #eec60a!important;
 }
 

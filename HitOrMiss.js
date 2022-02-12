@@ -19,12 +19,14 @@ const checkIfHitInFirst = (fakebox) => {
         fakebox.innerHTML = "✅";
         let inner = document.getElementsByClassName('log-wrapper')[0]
         inner.innerHTML = "HIT !!! Switch Team now."
+        var toHit = document.getElementsByClassName(`${i+1},${j+1}`)[0]
+        toHit.innerHTML = "HIT";
       } else {
         HitArrayForFirst[i][j] = false;
         fakebox.classList.add(".miss-box");
         fakebox.innerHTML = "❌";
         let inner = document.getElementsByClassName('log-wrapper')[0]
-        inner.innerHTML = "MISS !!! Switch Team now."
+        inner.innerHTML = "MISS !!! Switch Team now.";
       }
 
       if (checkIfWinInFirst() == true) {
@@ -63,6 +65,9 @@ const checkIfHitInSecond = (fakebox) => {
         fakebox.innerHTML = "✅";
         let inner = document.getElementsByClassName('log-wrapper')[0]
         inner.innerHTML = "HIT !!! Switch Team now."
+        var toHit = document.getElementsByClassName(`${i+1},${j+1}e`)[0]
+        toHit.innerHTML = "HIT";
+
       } else {
         HitArrayForSecond[i][j] = false;
         fakebox.classList.add(".miss-box");

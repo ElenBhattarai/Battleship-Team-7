@@ -26,6 +26,7 @@ let colors = ["red", "pink", "white", "orange", "yellow"];
 
 let gameBoardContainer1 = document.getElementById("firstGameBoard");
 
+
 // This function renders the First board
 const renderFirstBoard = () => {
   for (let i = 0; i < 11; i++) {
@@ -50,7 +51,8 @@ const renderFirstBoard = () => {
 
         square.addEventListener("click", () => placingShips(i,j,direction));
       }
-
+      
+ 
       // set each grid square's coordinates: multiples of the current row or column number
       let topPosition = i * squareSize;
       let leftPosition = j * squareSize;

@@ -6,18 +6,17 @@ let kun = 0;
 switchTeam.addEventListener("click", () => {
     if (kun % 2 == 0) 
     {
-        console.log(1);
         turnOverlayOn();
         gameBoardContainer1.classList.add("hidden");
         gameBoardContainer2.classList.remove("hidden");
         renderBackOfFirstBoard();
         backOfSecond.classList.add("hidden");
+
         backOfFirst.classList.remove("hidden");
         let inner = document.getElementsByClassName('log-wrapper')[0] 
         inner.innerHTML = "Player 2's turn, FIRE !!!"
     }
     else {
-        console.log(2);
         turnOverlayOn();
         gameBoardContainer2.classList.add("hidden");
         backOfSecond.classList.remove("hidden");
