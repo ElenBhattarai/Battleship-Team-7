@@ -3,10 +3,24 @@ html {
 }
 
 h1 {
-  font-family: "Permanent Marker", cursive;
-  font-size: 78px;
-  text-align: center;
-  margin: 0;
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+    margin: 0;
+    float: center;
+}
+
+.centerText {
+    font-size: 78px;
+}
+
+.leftText {
+    font-size: 24px;
+    padding-right: 9%;
+}
+
+.rightText {
+    font-size: 24px;
+    padding-left: 9%;
 }
 
 .new {
