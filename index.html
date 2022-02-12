@@ -40,7 +40,12 @@
 
 
 <body>
-    <h1>Battleship</h1>
+    <h1>
+        <span class="leftText">Player 1</span>
+        <span class="centerText">Battleship</span>
+        <span class="rightText">Player 2</span>
+    </h1>
+    <hr>
     <div class="center-container">
         <div id="boards">
         <div id="firstGameBoard" class="gameBoard"></div>
@@ -89,6 +94,7 @@
         <button id="clicker">Start Game</button>
         </div>
     </div>
+    <script src = "toggleOverlay.js"></script>
     <script src="Arrays.js"></script>
     <script src="CheckValidIndex.js"></script>
     <script src="placingShips.js"></script>
@@ -97,7 +103,6 @@
     <script src="switchTeam.js"></script>
     <script src="HitOrMiss.js"></script>
     <script src="Executive.js"></script>
-    <script src = "toggleOverlay.js"></script>
 </body>
 
 <div id = "overlay">
