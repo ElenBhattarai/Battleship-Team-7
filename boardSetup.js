@@ -1,5 +1,9 @@
-let originalNum = prompt("Please enter the number of ships you want");
+let originalNum = prompt("Enter the number of ships that you want to play with ( 1 to 5) ");
 
+if(isNaN(originalNum) || originalNum <= 0 || originalNum > 5)
+{
+  location.reload();
+}
 
 
 let numOfShips = originalNum;
