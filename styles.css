@@ -1,0 +1,118 @@
+.new{
+    display: flex;
+    justify-content: center;
+    
+}
+
+button{
+    font-size: 16px;
+    padding: 14px;
+    margin: 10px 10px 50px 10px;
+}
+
+
+#firstGameBoard{
+    display: inline;
+    position: relative;
+	width:400px;
+    margin: 120px;
+	height:400px;
+}
+
+#firstGameBoard div {
+	position:absolute;
+	background: green; /* Old browsers */
+	border: 1px solid #ddd;
+	width:40px;
+	height:40px;
+	font-size: 30px;
+	text-align: center;
+}
+
+
+#secondGameBoard{
+    display: inline;
+    position: relative;
+	width:400px;
+    margin: 600px;
+	height:400px;
+	font-size: 30px;
+	text-align: center;
+}
+
+#secondGameBoard div {
+	position:absolute;
+	background: blue; /* Old browsers */
+	border: 1px solid #ddd;
+	width:40px;
+	height:40px;
+}
+
+.hidden
+{
+	visibility: hidden;
+}
+
+#prompter
+{
+	color: black;
+	height: 70px;
+	width: 150px;
+	background:blue;
+	margin: 450px auto;
+	font-size: 30px;
+}
+#switchTeam
+{
+	color: black;
+	height: 70px;
+	width: 150px;
+	background:blue;
+	font-size: 30px;
+	margin: auto;
+}
+
+
+#backOfFirst{
+    display: inline;
+    position: relative;
+	width:400px;
+    margin: 120px;
+	height:400px;
+}
+
+#backOfFirst div {
+	position:absolute;
+	background: green; /* Old browsers */
+	border: 1px solid #ddd;
+	width:40px;
+	height:40px;
+	font-size: 30px;
+	text-align: center;
+	font-size: 20px;
+}
+
+
+#backOfSecond{
+    display: inline;
+    position: relative;
+	width:400px;
+    margin: 600px;
+	height:400px;
+}
+
+#backOfSecond div {
+	position:absolute;
+	background: blue; /* Old browsers */
+	border: 1px solid #ddd;
+	width:40px;
+	height:40px;
+	font-size: 30px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.hit {
+	background : red;
+}
+
