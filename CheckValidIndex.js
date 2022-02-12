@@ -1,59 +1,129 @@
-//checking for valid Index for CurrentClick > 1
-
-const validIndex = (square,shipDirection) => {
-    if(firstBoardDone == false)
+const validIndexForFirst = (i,j,direction,numOfShips) => {
+    if(direction == "vertical")
     {
-        let x = square.i;
-        let y = square.j;
-
-        if(shipDirection == "V")
+        console.log(i,j,direction,numOfShips)
+        if(i + parseInt(numOfShips) <=11)
         {
-            if(x == 9)
+            let isThere = false;
+            for(let k = 0; k < numOfShips;k++)
+            {
+                if(visitedArrayForFirst[i-1][j-1] == true)
+                {
+                    console.log('YES')
+                    isThere = true;
+                }
+                i++;
+            }
+            if(!isThere)
             {
                 return true;
             }
             else
             {
-                if(visitedArrayForFirst[x+1][y] == maxClick || visitedArrayForFirst[x-1][y] == maxClick)
-                {
-                
-                    return true;
-                }
+                let inner = document.getElementsByClassName('log-wrapper')[0] 
+                inner.innerHTML = "It would overlap with another ship, Try again"
             }
-            
         }
-        else if(shipDirection == "H")
+        else
         {
-            if(visitedArrayForFirst[x][y+1] == maxClick || visitedArrayForFirst[x][y-1] == maxClick)
-            {
-                return true;
-            }
+            let inner = document.getElementsByClassName('log-wrapper')[0] 
+            inner.innerHTML = "Out of bounds"
         }
-        return false;
     }
-    else
+    else if(direction == "horizontal")
     {
-        let x = square.i;
-        let y = square.j;
+        console.log(i,j,direction,numOfShips)
+        if(j + parseInt(numOfShips) <=11)
+        {
+            let isThere = false;
+            for(let k = 0; k < numOfShips;k++)
+            {
+                if(visitedArrayForFirst[i-1][j-1] == true)
+                {
+                    console.log('YES')
+                    isThere = true;
+                }
+                j++;
+            }
+            if(!isThere)
+            {
+                return true;
+            }
+            else
+            {
+                let inner = document.getElementsByClassName('log-wrapper')[0] 
+                inner.innerHTML = "It would overlap with another ship, Try again"
+            }
+        }
+        else
+        {
+            let inner = document.getElementsByClassName('log-wrapper')[0] 
+            inner.innerHTML = "Out of bounds"
+        }
+    }
+}
 
-        if(shipDirection == "V")
+const validIndexForSecond = (i,j,direction,numOfShips) => {
+    if(direction == "vertical")
+    {
+        console.log(i,j,direction,numOfShips)
+        if(i + parseInt(numOfShips) <=11)
         {
-            if(x == 9)
+            let isThere = false;
+            for(let k = 0; k < numOfShips;k++)
+            {
+                if(visitedArrayForSecond[i-1][j-1] == true)
+                {
+                    console.log('YES')
+                    isThere = true;
+                }
+                i++;
+            }
+            if(!isThere)
             {
                 return true;
             }
-            if(visitedArrayForSecond[x+1][y] == maxClick || visitedArrayForSecond[x-1][y] == maxClick)
+            else
             {
-                return true;
+                let inner = document.getElementsByClassName('log-wrapper')[0] 
+                inner.innerHTML = "It would overlap with another ship, Try again"
             }
         }
-        else if(shipDirection == "H")
+        else
         {
-            if(visitedArrayForSecond[x][y+1] == maxClick || visitedArrayForSecond[x][y-1] == maxClick)
+            let inner = document.getElementsByClassName('log-wrapper')[0] 
+            inner.innerHTML = "Out of bounds"
+        }
+    }
+    else if(direction == "horizontal")
+    {
+        console.log(i,j,direction,numOfShips)
+        if(j + parseInt(numOfShips) <=11)
+        {
+            let isThere = false;
+            for(let k = 0; k < numOfShips;k++)
+            {
+                if(visitedArrayForSecond[i-1][j-1] == true)
+                {
+                    console.log('YES')
+                    isThere = true;
+                }
+                j++;
+            }
+            if(!isThere)
             {
                 return true;
             }
+            else
+            {
+                let inner = document.getElementsByClassName('log-wrapper')[0] 
+                inner.innerHTML = "It would overlap with another ship, Try again"
+            }
         }
-        return false;
+        else
+        {
+            let inner = document.getElementsByClassName('log-wrapper')[0] 
+            inner.innerHTML = "Out of bounds"
+        }
     }
 }

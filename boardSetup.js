@@ -1,4 +1,7 @@
 let originalNum = prompt("Please enter the number of ships you want");
+
+
+
 let numOfShips = originalNum;
 let squareSize = 40;
 let alphabets = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];

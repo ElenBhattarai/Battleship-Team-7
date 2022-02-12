@@ -6,31 +6,39 @@ const checkIfHitInFirst = (fakebox) => {
   if (turnSwitch % 2 == 0) {
     alert("Not your, Player 2,switch team now");
   } else {
-    if (visitedArrayForFirst[i][j]) {
-      HitArrayForFirst[i][j] = true;
-      fakebox.classList.add(".hit-box");
-      fakebox.innerHTML = "✅";
+    if(HitArrayForFirst[i][j] == true || HitArrayForFirst[i][j] == false)
+    {
       let inner = document.getElementsByClassName('log-wrapper')[0] 
-      inner.innerHTML = "HIT !!! Switch Team now."
-    } else {
-      HitArrayForFirst[i][j] = false;
-      fakebox.classList.add(".miss-box");
-      fakebox.innerHTML = "❌";
-      let inner = document.getElementsByClassName('log-wrapper')[0] 
-      inner.innerHTML = "MISS !!! Switch Team now."
+      inner.innerHTML = "Already clicked that space. Try again !"
     }
-
-    if (checkIfWinInFirst() == true) {
-      setTimeout(() => {
-        alert("Player 2 won");
-      }, 200);
-
-      setTimeout(() => {
-        location.reload();
-      }, 200);
+    else
+    {
+      if (visitedArrayForFirst[i][j]) {
+        HitArrayForFirst[i][j] = true;
+        fakebox.classList.add(".hit-box");
+        fakebox.innerHTML = "✅";
+        let inner = document.getElementsByClassName('log-wrapper')[0] 
+        inner.innerHTML = "HIT !!! Switch Team now."
+      } else {
+        HitArrayForFirst[i][j] = false;
+        fakebox.classList.add(".miss-box");
+        fakebox.innerHTML = "❌";
+        let inner = document.getElementsByClassName('log-wrapper')[0] 
+        inner.innerHTML = "MISS !!! Switch Team now."
+      }
+  
+      if (checkIfWinInFirst() == true) {
+        setTimeout(() => {
+          alert("Player 2 won");
+        }, 200);
+  
+        setTimeout(() => {
+          location.reload();
+        }, 200);
+      }
+      turnSwitch++;
+      switchTeam.classList.remove("hidden");
     }
-    turnSwitch++;
-    switchTeam.classList.remove("hidden");
   }
 };
 
@@ -42,32 +50,40 @@ const checkIfHitInSecond = (fakebox) => {
   if (turnSwitch % 2 == 1) {
     alert("Not your turn, Player 1,switch team now");
   } else {
-    if (visitedArrayForSecond[i][j]) {
-      HitArrayForSecond[i][j] = true;
-      fakebox.classList.add(".hit-box");
-      fakebox.innerHTML = "✅";
+    if(HitArrayForSecond[i][j] == true || HitArrayForSecond[i][j] == false)
+    {
       let inner = document.getElementsByClassName('log-wrapper')[0] 
-      inner.innerHTML = "HIT !!! Switch Team now."
-    } else {
-      HitArrayForSecond[i][j] = false;
-      fakebox.classList.add(".miss-box");
-      fakebox.innerHTML = "❌";
-      let inner = document.getElementsByClassName('log-wrapper')[0] 
-      inner.innerHTML = "MISS !!! Switch Team now."
+      inner.innerHTML = "Already clicked that space. Try again !"
     }
-
-    if (checkIfWinInSecond() == true) {
-      setTimeout(() => {
-        alert("Player 1 won");
-      }, 200);
-
-      setTimeout(() => {
-        location.reload();
-      }, 200);
+    else
+    {
+      if (visitedArrayForSecond[i][j]) {
+        HitArrayForSecond[i][j] = true;
+        fakebox.classList.add(".hit-box");
+        fakebox.innerHTML = "✅";
+        let inner = document.getElementsByClassName('log-wrapper')[0] 
+        inner.innerHTML = "HIT !!! Switch Team now."
+      } else {
+        HitArrayForSecond[i][j] = false;
+        fakebox.classList.add(".miss-box");
+        fakebox.innerHTML = "❌";
+        let inner = document.getElementsByClassName('log-wrapper')[0] 
+        inner.innerHTML = "MISS !!! Switch Team now."
+      }
+  
+      if (checkIfWinInSecond() == true) {
+        setTimeout(() => {
+          alert("Player 1 won");
+        }, 200);
+  
+        setTimeout(() => {
+          location.reload();
+        }, 200);
+      }
+      turnSwitch++;
+      switchTeam.classList.remove("hidden");
     }
-    turnSwitch++;
-    switchTeam.classList.remove("hidden");
-  }
+  }    
 };
 
 const checkIfWinInFirst = () => {
@@ -79,7 +95,7 @@ const checkIfWinInFirst = () => {
       }
     }
   }
-  if (hitCountFirst == findTotalClickCount(originalNum)) {
+  if (hitCountFirst == findTotalClickCount(parseInt(originalNum))) {
     return true;
   } else {
     return false;
@@ -95,7 +111,7 @@ const checkIfWinInSecond = () => {
       }
     }
   }
-  if (hitCountSecond == findTotalClickCount(originalNum)) {
+  if (hitCountSecond == findTotalClickCount(parseInt(originalNum))) {
     return true;
   } else {
     return false;
