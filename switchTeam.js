@@ -6,7 +6,7 @@ let kun = 0;
 switchTeam.addEventListener("click", () => {
     if (kun % 2 == 0) 
     {
-        turnOverlayOn();
+        turnOverlayOn(); // toggles the overlay that needs user to press "g"; done to make the game realistic multiplayer
         gameBoardContainer1.classList.add("hidden");
         gameBoardContainer2.classList.remove("hidden");
         renderBackOfFirstBoard();
@@ -17,7 +17,7 @@ switchTeam.addEventListener("click", () => {
         inner.innerHTML = "Player 2's turn, FIRE !!!"
     }
     else {
-        turnOverlayOn();
+        turnOverlayOn(); // toggles the overlay that needs user to press "g"; done to make the game realistic multiplayer
         gameBoardContainer2.classList.add("hidden");
         backOfSecond.classList.remove("hidden");
         renderBackOfSecondBoard();

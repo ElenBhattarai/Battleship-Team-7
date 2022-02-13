@@ -1,15 +1,28 @@
+//This is what starts the game by prompting the user.
+
+
+let originalNum = prompt("Enter the number of ships that you want to play with ( 1 to 5) ");
+//unless number between 1 to 5 is entered it will keep prompting the user.
+if(isNaN(originalNum) || originalNum <= 0 || originalNum > 5)
+{
+  location.reload();
+}
+
+let numOfShips = originalNum;
+
+
 //this is what starts the game; it is defined in boardSetup.js
-renderFirstBoard();//The game boards will not start until the "Begin Game" buttin is pressed
-
-
+renderFirstBoard();
 
 let playerNow = 1;
 
-
+//gets the orientation that the user wants. Listens to the radio buttons on homepage
 const getOrientation = (orientation) => {
     let radios = document.getElementsByName('orientation').value = orientation
     direction = radios;
 }
+
+//updates the text of which ship to place for the user needs to place
 const updateShipText = () => {
   let inner = document.getElementsByClassName('log-wrapper')[0] 
   if(numOfShips>0)
@@ -18,10 +31,8 @@ const updateShipText = () => {
   }      
   
 }
+
 updateShipText();
-
-
-
 
 //The calls to this function are made from placingShips.js.
 //It is used for rendering the second board after the first board is done placing ships.

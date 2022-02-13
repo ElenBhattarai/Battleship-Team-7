@@ -1,3 +1,9 @@
+// @params: i, j, direction, number of ships
+//this function checks whether the placing ships are valid or not.
+//checks both overflow from the board and whether it not it will intersect with another board.
+
+
+//Valid index for the first board
 const validIndexForFirst = (i,j,direction,numOfShips) => {
     if(direction == "vertical")
     {
@@ -63,6 +69,8 @@ const validIndexForFirst = (i,j,direction,numOfShips) => {
     }
 }
 
+
+//Valid index for the second board
 const validIndexForSecond = (i,j,direction,numOfShips) => {
     if(direction == "vertical")
     {
