@@ -16,47 +16,56 @@ const placingShips = (i,j,direction) => {
         //if not work on firstBoard
                 let color = ""
 
+                //fifth ships color
                 if(numOfShips == 5)
                 {
                     color = "carrier";
                 }
+                //fourth ships color
                 else if(numOfShips == 4)
                 {
                     color = "battleship"
                 }
+                //third ships color
                 else if(numOfShips == 3)
                 {
                     color = "cruiser"
                 }
+                //second ships color
                 else if(numOfShips == 2)
                 {
                     color = "submarine"
                 }
+                //first ships color
                 else
                 {
                     color = "destroyer"
                 }
                 
 
-
+                //runs a for loop to place the ship in the right index.
                 for(let k = 0; k < numOfShips; k++)
                 {
                     visitedArrayForFirst[i-1][j-1] = true;
                     var toHit = document.getElementsByClassName(`${i},${j}`)[0]
                     toHit.classList.add(color);
+                    //if the direction the user has is vertical, then the i++ will be increased.
                     if(direction == "vertical")
                     {
                         i++;
                     }
                     else
                     {
+                        // else j++ is increased i.e horizontal
                         j++;
                     }
                     
                     
                 }
                 
+                //number of ship is decreased after each placement of ship
                 numOfShips--;
+                //update the description box accordingly.
                 updateShipText();
             
 
@@ -81,29 +90,34 @@ const placingShips = (i,j,direction) => {
             let color = ""
 
 
+                //fifth ships color
                 if(numOfShips == 5)
                 {
                     color = "carrier";
                 }
+                //fourth ships color
                 else if(numOfShips == 4)
                 {
                     color = "battleship"
                 }
+                //third ships color
                 else if(numOfShips == 3)
                 {
                     color = "cruiser"
                 }
+                //second ships color
                 else if(numOfShips == 2)
                 {
                     color = "submarine"
                 }
+                //first ships color
                 else
                 {
                     color = "destroyer"
                 }
                 
 
-
+                //runs a for loop to place the ship in the right index.
                 for(let k = 0; k < numOfShips; k++)
                 {
                     visitedArrayForSecond[i-1][j-1] = true;
@@ -111,17 +125,20 @@ const placingShips = (i,j,direction) => {
                     toHit.classList.add(color);
                     if(direction == "vertical")
                     {
+                        //if the direction the user has is vertical, then the i++ will be increased.
                         i++;
                     }
                     else
                     {
+                        // else j++ is increased i.e horizontal
                         j++;
                     }
                     
                     
                 }
-                
+                //number of ship is decreased after each placement of ship
                 numOfShips--;
+                //update the description box accordingly.
                 updateShipText();
             
 

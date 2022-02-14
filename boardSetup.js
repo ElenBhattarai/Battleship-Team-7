@@ -18,17 +18,26 @@ const renderFirstBoard = () => {
   //run the loop 11 times cause we also need the first row and column for board indexes.
   for (let i = 0; i < 11; i++) {
     for (let j = 0; j < 11; j++) {
+
+      //make a new box container to put in all the boxes of the grid
       let square = document.createElement("div");
+
+      //set the i =0 ,j = 0 index to not have anything in it cause we dont need it
       if (i == 0 && !(i == 0 && j == 0)) {
         square.innerHTML = alphabets[alphaNum];
         alphaNum++;
       }
+
+       //set the first row to have the numbers from one to 10.
       if (j == 0 && !(i == 0 && j == 0)) {
         square.innerHTML = numbers[num];
         num++;
       }
+
+       //append all the boxes into the main container.
       gameBoardContainer1.appendChild(square).className = `${i},${j}`;
 
+      //if set box.i and box.j properties to i-1, j-1 cause we dont need first and last 
       if (!(i == 0 || j == 0)) {
         square.i = i - 1;
         square.j = j - 1;
@@ -60,6 +69,7 @@ const renderSecondBoard = () => {
   //run the loop 11 times cause we also need the first row and column for board indexes.
   for (let i = 0; i < 11; i++) {
     for (let j = 0; j < 11; j++) {
+      //make a new box container to put in all the boxes of the grid
       let box = document.createElement("div");
 
       //set the i =0 ,j = 0 index to not have anything in it cause we dont need it
@@ -68,11 +78,17 @@ const renderSecondBoard = () => {
         box.innerHTML = alphabets[secondAlphaNum];
         secondAlphaNum++;
       }
+
+      //set the first row to have the numbers from one to 10.
       if (j == 0 && !(i == 0 && j == 0)) {
         box.innerHTML = numbers[secondNum];
         secondNum++;
       }
+
+      //append all the boxes into the main container.
       gameBoardContainer2.appendChild(box).className = `${i},${j}e`;
+
+      //if set box.i and box.j properties to i-1, j-1 cause we dont need first and last 
       if (!(i == 0 || j == 0)) {
         box.i = i - 1;
         box.j = j - 1;

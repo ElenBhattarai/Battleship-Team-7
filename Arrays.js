@@ -7,7 +7,6 @@ for(let i = 0; i < 10; i++)
 	ships[i] = new Array();
 }
 
-
 //Array that get's updated after the Ships are place on the second board. 
 let boxes = [];
 for(let i = 0; i < 10; i++)

@@ -7,10 +7,10 @@ switchTeam.addEventListener("click", () => {
     if (kun % 2 == 0) 
     {
         turnOverlayOn(); // toggles the overlay that needs user to press "g"; done to make the game realistic multiplayer
-        gameBoardContainer1.classList.add("hidden");
-        gameBoardContainer2.classList.remove("hidden");
+        gameBoardContainer1.classList.add("hidden"); //first board is hidden
+        gameBoardContainer2.classList.remove("hidden"); //second board is shown
         renderBackOfFirstBoard();
-        backOfSecond.classList.add("hidden");
+        backOfSecond.classList.add("hidden"); 
 
         backOfFirst.classList.remove("hidden");
         let inner = document.getElementsByClassName('log-wrapper')[0] 
@@ -18,11 +18,11 @@ switchTeam.addEventListener("click", () => {
     }
     else {
         turnOverlayOn(); // toggles the overlay that needs user to press "g"; done to make the game realistic multiplayer
-        gameBoardContainer2.classList.add("hidden");
-        backOfSecond.classList.remove("hidden");
+        gameBoardContainer2.classList.add("hidden"); //second board is hidden
+        backOfSecond.classList.remove("hidden"); 
         renderBackOfSecondBoard();
         backOfFirst.classList.add("hidden");
-        gameBoardContainer1.classList.remove("hidden");
+        gameBoardContainer1.classList.remove("hidden"); //first board is hidden
         let inner = document.getElementsByClassName('log-wrapper')[0] 
         inner.innerHTML = "Player 1's turn, FIRE !!!"
     }
